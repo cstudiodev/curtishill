@@ -7,6 +7,7 @@ const MobileMenu = () => {
         cStudio
       </h3>
       <ul className='mobile-nav'>
+        <li className='link'>Home</li>
         <li className='link'>About</li>
         <li className='link'>Contact</li>
         <li className='link'>FAQ</li>
