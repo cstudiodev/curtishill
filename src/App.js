@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Element } from 'react-scroll';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -22,16 +23,27 @@ function App() {
   const toggleMobileMenu = () => {
     setMobileMenuVisible(!isMobileMenuVisible);
   };
-  
+
   return (
     <div className='app'>
-      <Header isSticky={isSticky} toggleMobileMenu={toggleMobileMenu} isMobileMenuVisible={isMobileMenuVisible} />
-      <Hero />
-      <Services />
-      <Technologies />
+      <Header
+        isSticky={isSticky}
+        toggleMobileMenu={toggleMobileMenu}
+        isMobileMenuVisible={isMobileMenuVisible}
+      />
+      <Element name="hero">
+        <Hero />
+      </Element>
+      <Element name="services">
+        <Services />
+      </Element>
+      <Element name="technologies">
+        <Technologies />
+      </Element>
     </div>
   );
 }
+
 
 export default App;
 

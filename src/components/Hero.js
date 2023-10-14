@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
@@ -10,9 +11,11 @@ const Hero = () => {
           <h1>Web Design</h1>
           <h1>UI/UX</h1>
         </div>
-        <button className='next-section-button'>
-          D
-        </button>
+          <Link to="services" spy={true} smooth={true} offset={-100} duration={500}>
+            <button className='next-section-button'>
+              D
+            </button>
+          </Link>
       </div>
     </section>
   )
