@@ -1,9 +1,9 @@
 import React from 'react';
 import MobileMenu from './MobileMenu';
 
-const Header = ({ toggleMobileMenu, isMobileMenuVisible }) => {
+const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
   return (
-    <header className='header'>
+    <header className={`header ${isSticky ? 'sticky' : ''}`}>
       <div className='header-content'>
         <h3 className='link'>
           cStudio

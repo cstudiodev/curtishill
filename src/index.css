@@ -27,6 +27,7 @@ h3 {
 
 p, li, button {
   font-size: 20px;
+  line-height: 150%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -135,8 +136,14 @@ button, input[type="button"], input[type="submit"] {
 /* HEADER --- */
 
 .header {
+  position: sticky;
+  top: 0;
   height: 100px;
   background: #f7f7f7;
+}
+
+.header.sticky {
+  background-color: #fff;
 }
 
 .header-content {
@@ -238,7 +245,7 @@ button, input[type="button"], input[type="submit"] {
   height: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 50px 10px;
+  padding: 60px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -257,20 +264,17 @@ button, input[type="button"], input[type="submit"] {
 /* SERVICES SECTION --- */
 
 .section-services {
-  height: calc(100vh);
-  min-height: 500px;
   background-color: #fff;
 }
 
 .services-content {
-  height: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 50px 10px;
+  padding: 60px 10px;
 }
 
 .services-heading {
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .services-card-container {
@@ -292,3 +296,25 @@ button, input[type="button"], input[type="submit"] {
 }
 
 /* TECHNOLOGIES SECTION --- */
+
+.section-technologies {
+  background-color: #028fff;
+}
+
+.technologies-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.technologies-heading {
+  padding-bottom: 40px;
+}
+
+.technologies-text {
+  max-width: 80%;
+  margin: auto;
+}
+
