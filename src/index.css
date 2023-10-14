@@ -25,6 +25,30 @@ p, li, button {
   font-size: 20px;
 }
 
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p, li, button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 30px;
+  }
+}
+
 ul, ol {
   list-style: none;
   padding: 0;
@@ -54,15 +78,25 @@ button, input[type="button"], input[type="submit"] {
   cursor: pointer;
 }
 
-.cta-button {
+.header-cta-button {
+  height: 60px;
+  width: 120px;
   background: #f7f7f7;
   border: 1px solid #000;
   padding: 10px 20px;
 }
 
 .next-section-button {
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
+  background: #f7f7f7;
+  border: 1px solid #000;
+  padding: 10px 20px;
+}
+
+.mobile-menu-button {
+  height: 60px;
+  width: 60px;
   background: #f7f7f7;
   border: 1px solid #000;
   padding: 10px 20px;
@@ -94,17 +128,44 @@ button, input[type="button"], input[type="submit"] {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
+}
+
+@media screen and (max-width: 700px) {
+  .header-nav {
+    display: none;
+  };
 }
 
 .header-nav li {
   padding: 5px 10px;
 }
 
+.header-cta-button {
+  display: inline;
+}
+
+@media screen and (max-width: 700px) {
+  .header-cta-button {
+    display: none;
+  }
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .mobile-menu-button {
+    display: inline;
+  }
+}
+
 /* HERO SECTION --- */
 
 .section-hero {
   height: calc(100vh - 100px);
+  min-height: 500px;
   background-color: #f7f7f7;
 }
 
@@ -120,10 +181,12 @@ button, input[type="button"], input[type="submit"] {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .hero-cta {
   height: 30%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
