@@ -10,11 +10,9 @@ const Hero = () => {
           <h1>Web Design</h1>
           <h1>UI/UX</h1>
         </div>
-        <div className='hero-cta'>
-          <button className='next-section-button'>
-            D
-          </button>
-        </div>
+        <button className='next-section-button'>
+          D
+        </button>
       </div>
     </section>
   )
