@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
+import MobileMenu from './MobileMenu';
 
-const Header = () => {
+const Header = ({ toggleMobileMenu, isMobileMenuVisible }) => {
   return (
     <header className='header'>
       <div className='header-content'>
@@ -15,12 +16,13 @@ const Header = () => {
         <button className='header-cta-button'>
           HIRE
         </button>
-      <button className='mobile-menu-button'>
-        M
-      </button>
+        <button className='mobile-menu-button' onClick={toggleMobileMenu}>
+          {isMobileMenuVisible ? 'X' : 'M'}
+        </button>
       </div>
+      {isMobileMenuVisible && <MobileMenu />}
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
