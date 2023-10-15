@@ -4,7 +4,7 @@ import { Element } from 'react-scroll';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import Technologies from './components/Technologies';
+import About from './components/About';
 
 function App() {
   const [isSticky, setIsSticky] = useState(false);
@@ -37,8 +37,8 @@ function App() {
       <Element name="services">
         <Services />
       </Element>
-      <Element name="technologies">
-        <Technologies />
+      <Element name="about">
+        <About />
       </Element>
     </div>
   );

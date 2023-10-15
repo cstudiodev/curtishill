@@ -6,11 +6,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
   return (
     <header className={`header ${isSticky ? 'sticky' : ''}`}>
       <div className="header-content">
-        <h3>
-          cStudio
-        </h3>
-        <ul className="header-nav">
-          <Link
+        <Link
             to="hero"
             spy={true}
             smooth={true}
@@ -18,8 +14,11 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             duration={500}
             activeClass="active"
           >
-            <li className='link'>About</li>
-          </Link>
+          <h3 className='link'>
+            cStudio
+          </h3>
+        </Link>
+        <ul className="header-nav">
           <Link
             to="services"
             spy={true}
@@ -29,6 +28,16 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             activeClass="active"
           >
             <li className='link'>Services</li>
+          </Link>
+          <Link
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            activeClass="active"
+          >
+            <li className='link'>About</li>
           </Link>
           <Link
             to="contact"
