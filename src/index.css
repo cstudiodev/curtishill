@@ -21,6 +21,10 @@ h3 {
   font-size: 30px;
 }
 
+h4 {
+  font-size: 25px;
+}
+
 p, li, button {
   font-size: 20px;
   line-height: 150%;
@@ -47,6 +51,9 @@ p, li, button {
   }
   h3 {
     font-size: 20px;
+  }
+  h4 {
+    font-size: 15px;
   }
   p, li, button {
     font-size: 15px;
@@ -301,8 +308,12 @@ button, input[type="button"], input[type="submit"] {
   max-width: 1200px;
   margin: auto;
   padding: 60px 10px;
+}
+
+.about-video-with-text-container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  padding-bottom: 60px;
 }
 
 .about-text-section {
@@ -330,9 +341,8 @@ button, input[type="button"], input[type="submit"] {
 }
 
 @media screen and (max-width: 1000px) {
-  .about-content {
+  .about-video-with-text-container {
     flex-direction: column;
-    gap: 30px;
   }
   .about-text-section {
     width: 100%;
@@ -342,26 +352,43 @@ button, input[type="button"], input[type="submit"] {
   }
 }
 
-/* TECHNOLOGIES SECTION --- */
-
-.section-technologies {
-  background-color: #028fff;
+.about-trust-badge-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.technologies-content {
+.about-trust-badge {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 15px;
+  gap: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .about-trust-badge-container {
+  }
+  .about-trust-badge {
+    width: 50%;
+  }
+}
+
+/* CONTACT SECTION --- */
+
+.section-contact {
+  background-color: #fff;
+}
+
+.contact-content {
   max-width: 1200px;
   margin: auto;
   padding: 60px 10px;
-  text-align: center;
-  color: #fff;
 }
 
-.technologies-heading {
-  padding-bottom: 40px;
+.contact-heading {
+  padding-bottom: 60px;
 }
-
-.technologies-text {
-  max-width: 80%;
-  margin: auto;
-}
-
