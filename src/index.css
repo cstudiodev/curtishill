@@ -312,20 +312,27 @@ button, input[type="button"], input[type="submit"] {
 
 .about-video-with-text-container {
   display: flex;
+  align-items: center;
   gap: 30px;
   padding-bottom: 60px;
 }
 
 .about-text-section {
   width: 50%;
+  padding-right: 25px;
 }
 
 .about-heading {
-  padding-bottom: 30px;
+  padding-bottom: 60px;
 }
 
-.about-text:first-of-type {
-  padding-bottom: 30px;
+.about-text {
+  padding-bottom: 20px;
+
+}
+
+.about-text:last-of-type {
+  padding-bottom: 0px;
 }
 
 .about-video-section {
