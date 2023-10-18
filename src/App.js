@@ -1,6 +1,6 @@
 import React from 'react';
-import { useState } from 'react';
-import { Element } from 'react-scroll';
+import { useState, useEffect } from 'react';
+import { Element, Events, scrollSpy } from 'react-scroll';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 function App() {
   const [isSticky, setIsSticky] = useState(false);
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
 
   const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -25,6 +26,20 @@ function App() {
     setMobileMenuVisible(!isMobileMenuVisible);
   };
 
+  useEffect(() => {
+    Events.scrollEvent.register('begin', () => {});
+    Events.scrollEvent.register('end', (to, element) => {
+      setActiveSection(to);
+    });
+
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
+
   return (
     <div className='app'>
       <Header
@@ -33,13 +48,13 @@ function App() {
         isMobileMenuVisible={isMobileMenuVisible}
       />
       <Element name="hero">
-        <Hero />
+        <Hero activeSection={activeSection} />
       </Element>
       <Element name="services">
-        <Services />
+        <Services activeSection={activeSection} />
       </Element>
       <Element name="about">
-        <About />
+        <About activeSection={activeSection} />
       </Element>
       <Element name="contact">
         <Contact />
@@ -48,6 +63,4 @@ function App() {
   );
 }
 
-
 export default App;
-

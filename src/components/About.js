@@ -4,11 +4,15 @@ import IconResume from '../assets/IconResume'
 import IconCreditCard from '../assets/IconCreditCard'
 import IconSupport from '../assets/IconSupport'
 
-const About = () => {
+const About = ({ activeSection }) => {
   return (
-    <section className='section alt-bg'>
+    <section id="about" className='section alt-bg'>
       <div className='section-content'>
-        <h2 className='section-heading'>About Me</h2>
+        <div className='section-heading'>
+          <h2 className={`${activeSection === 'about' ? 'heading-active' : ''}`}>
+            About Me
+          </h2>
+        </div>
         <div className='about-video-with-text-container'>
           <div className='about-text-section'>
             <p className='about-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

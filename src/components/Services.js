@@ -1,10 +1,14 @@
 import React from 'react'
 
-const Services = () => {
+const Services = ({ activeSection }) => {
   return (
-    <section className='section'>
+    <section id="services" className='section'>
       <div className='section-content'>
-        <h2 className='section-heading'>How I Can Help You</h2>
+        <div className='section-heading'>
+          <h2 className={`${activeSection === 'services' ? 'heading-active' : ''}`}>
+            How I Can Help You
+          </h2>
+        </div>
         <div className='services-card-container'>
           <p className='services-card'>Planning & Consulting</p>
           <p className='services-card'>Web Design</p>
