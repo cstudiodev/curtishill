@@ -12,9 +12,7 @@ const MobileMenu = () => {
         <li className='link'>Contact</li>
         <li className='link'>FAQ</li>
       </ul>
-      <button className='mobile-cta-button'>
-        HIRE
-      </button>
+      <button className='btn btn-lg'>HIRE</button>
     </div>
   )
 }

@@ -1,10 +1,14 @@
 import React from 'react'
+import IconBadge from '../assets/IconBadge'
+import IconResume from '../assets/IconResume'
+import IconCreditCard from '../assets/IconCreditCard'
+import IconSupport from '../assets/IconSupport'
 
 const About = () => {
   return (
-    <section className='section-about'>
-      <div className='about-content'>
-        <h2 className='about-heading'>About Me</h2>
+    <section className='section alt-bg'>
+      <div className='section-content'>
+        <h2 className='section-heading'>About Me</h2>
         <div className='about-video-with-text-container'>
           <div className='about-text-section'>
             <p className='about-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -31,24 +35,24 @@ const About = () => {
         </div>
         <div className='about-trust-badge-container'>
           <div className='about-trust-badge'>
-            <div className='trust-icon'>ICON</div>
-            <h4>TRUST ONE</h4>
-            <p>Some text about trust one.</p>
+            <IconBadge />
+            <h4>100% Success Rate</h4>
+            <p>On Upwork</p>
           </div>
           <div className='about-trust-badge'>
-            <div className='trust-icon'>ICON</div>
-            <h4>TRUST ONE</h4>
-            <p>Some text about trust one.</p>
+            <IconResume />
+            <h4>10+ Years Experience</h4>
+            <p>In Ecommerce</p>
           </div>
           <div className='about-trust-badge'>
-            <div className='trust-icon'>ICON</div>
-            <h4>TRUST ONE</h4>
-            <p>Some text about trust one.</p>
+            <IconCreditCard />
+            <h4>100% Money-Back</h4>
+            <p>Guarantee</p>
           </div>
           <div className='about-trust-badge'>
-            <div className='trust-icon'>ICON</div>
-            <h4>TRUST ONE</h4>
-            <p>Some text about trust one.</p>
+            <IconSupport />
+            <h4>Ongoing Support</h4>
+            <p>& Maintainence</p>
           </div>
         </div>
       </div>

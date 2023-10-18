@@ -2,11 +2,9 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <section className='section-services'>
-      <div className='services-content'>
-        <div className='services-heading'>
-          <h2>How I Can Help You</h2>
-        </div>
+    <section className='section'>
+      <div className='section-content'>
+        <h2 className='section-heading'>How I Can Help You</h2>
         <div className='services-card-container'>
           <p className='services-card'>Planning & Consulting</p>
           <p className='services-card'>Web Design</p>

@@ -12,11 +12,9 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             smooth={true}
             offset={-100}
             duration={500}
-            activeClass="active"
+            activeClass="link-active"
           >
-          <h3 className='link'>
-            cStudio
-          </h3>
+          <h3 className='link'>cStudio</h3>
         </Link>
         <ul className="header-nav">
           <Link
@@ -25,7 +23,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             smooth={true}
             offset={-100}
             duration={500}
-            activeClass="active"
+            activeClass="link-active"
           >
             <li className='link'>Services</li>
           </Link>
@@ -35,7 +33,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             smooth={true}
             offset={-100}
             duration={500}
-            activeClass="active"
+            activeClass="link-active"
           >
             <li className='link'>About</li>
           </Link>
@@ -45,7 +43,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             smooth={true}
             offset={-100}
             duration={500}
-            activeClass="active"
+            activeClass="link-active"
           >
             <li className='link'>Contact</li>
           </Link>
@@ -55,14 +53,14 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             smooth={true}
             offset={-100}
             duration={500}
-            activeClass="active"
+            activeClass="link-active"
           >
             <li className='link'>FAQ</li>
           </Link>
         </ul>
-        <button className="header-cta-button">Hire</button>
+        <button className="btn header-cta-btn btn-lg">Hire</button>
         <button
-          className="mobile-menu-button"
+          className="btn mobile-menu-btn"
           onClick={toggleMobileMenu}
         >
           {isMobileMenuVisible ? 'X' : 'M'}
