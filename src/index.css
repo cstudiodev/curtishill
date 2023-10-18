@@ -328,11 +328,20 @@ button, input[type="button"], input[type="submit"] {
 
 .about-text {
   padding-bottom: 20px;
+  max-width: 95%;
 
 }
 
-.about-text:last-of-type {
-  padding-bottom: 0px;
+.about-technology-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.about-technology {
+  padding: 5px 12px;
+  border: 1px solid #000;
+  border-radius: 10px;
 }
 
 .about-video-section {

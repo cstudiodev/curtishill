@@ -7,10 +7,23 @@ const About = () => {
         <h2 className='about-heading'>About Me</h2>
         <div className='about-video-with-text-container'>
           <div className='about-text-section'>
-            <p className='about-text'>Hi, I'm Curtis!</p>
-            <p className='about-text'>Leverage my 10+ years of experience in Shopify development, web and UI/UX design, and digital marketing, and let's take your business to the next level.</p>
+            <p className='about-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             <p className='about-text'>Technologies I use:</p>
-            <p className='about-text'>HTML, CSS, JavaScript, Shopify Liquid, Shopify CLI, React, Node, MongoDB, Github, Adobe Photoshop, Adobe XD, Figma, and GPT-4.</p>
+            <div className='about-technology-container'>
+              <p className='about-technology'>HTML</p>
+              <p className='about-technology'>CSS</p>
+              <p className='about-technology'>JavaScript</p>
+              <p className='about-technology'>Shopify Liquid</p>
+              <p className='about-technology'>Shopify CLI</p>
+              <p className='about-technology'>React</p>
+              <p className='about-technology'>Node</p>
+              <p className='about-technology'>MongoDB</p>
+              <p className='about-technology'>Github</p>
+              <p className='about-technology'>Adobe Photoshop</p>
+              <p className='about-technology'>Adobe XD</p>
+              <p className='about-technology'>Figma</p>
+              <p className='about-technology'>GPT-4</p>
+            </div>
           </div>
           <div className='about-video-section'>
             <div className='about-video'>PLAY</div>
