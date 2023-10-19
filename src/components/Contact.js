@@ -12,6 +12,27 @@ const Contact = ({ activeSection }) => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+      });
+  
+      if (response.ok) {
+        // Success: You can handle success actions here (e.g., show a success message).
+        console.log('Form submitted successfully');
+      } else {
+        // Error: You can handle error actions here (e.g., show an error message).
+        console.error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  };
+  
+
   return (
     <section id="contact" className='section'>
       <div className='section-content'>
