@@ -12,16 +12,6 @@ const Contact = ({ activeSection }) => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch('/.netlify/functions/send-email', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-    });
-    
-    console.log(formData);
-  };
-
   return (
     <section id="contact" className='section'>
       <div className='section-content'>
@@ -31,7 +21,7 @@ const Contact = ({ activeSection }) => {
           </h2>
         </div>
         <div className='contact-form'>
-          <form onSubmit={handleSubmit}>
+          <form name="contact-form" netlify>
             <div className="form-group">
               <label htmlFor="name">Name:</label>
               <input
