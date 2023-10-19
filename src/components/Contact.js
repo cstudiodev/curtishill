@@ -30,7 +30,7 @@ const Contact = ({ activeSection }) => {
     } catch (error) {
       console.error('An error occurred:', error);
     }
-  };
+  };  
   
 
   return (
@@ -42,7 +42,7 @@ const Contact = ({ activeSection }) => {
           </h2>
         </div>
         <div className='contact-form'>
-          <form name="contact-form" netlify>
+          <form name="contact-form" netlify onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name:</label>
               <input
