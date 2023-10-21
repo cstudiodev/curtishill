@@ -356,7 +356,7 @@ p, li, button {
 .about-technology-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
 }
 
 .about-technology {
@@ -392,25 +392,27 @@ p, li, button {
 
 .about-trust-badge-container {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .about-trust-badge-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .about-trust-badge {
-  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px 15px;
+  padding: 15px 5px;
   gap: 10px;
-}
-
-@media screen and (max-width: 500px) {
-  .about-trust-badge {
-    width: 50%;
-  }
+  background: var(--bg-color);
+  border-radius: var(--border-radius);
 }
 
 /* CONTACT SECTION --- */
