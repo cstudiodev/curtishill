@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import MobileMenu from './MobileMenu';
+import IconMenu from '../assets/IconMenu';
+import IconClose from '../assets/IconClose';
 
 const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
   return (
@@ -62,10 +64,10 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
         </ul>
         <button className="btn header-cta-btn btn-lg">Hire</button>
         <button
-          className="btn mobile-menu-btn"
+          className="icon-btn mobile-menu-btn"
           onClick={toggleMobileMenu}
         >
-          {isMobileMenuVisible ? 'X' : 'M'}
+          {isMobileMenuVisible ? <IconClose /> : <IconMenu />}
         </button>
       </div>
       {isMobileMenuVisible && <MobileMenu />}

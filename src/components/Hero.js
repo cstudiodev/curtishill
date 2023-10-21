@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
+import IconDown from '../assets/IconDown';
 
 const Hero = () => {
   return (
@@ -12,7 +13,9 @@ const Hero = () => {
           <h1>UI/UX</h1>
         </div>
           <Link to="services" spy={true} smooth={true} offset={-100} duration={500}>
-            <button className='btn'>D</button>
+            <button className="icon-btn hero-down-btn">
+              <IconDown />
+            </button>
           </Link>
       </div>
     </section>
