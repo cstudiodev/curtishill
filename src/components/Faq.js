@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import IconPlus from '../assets/IconPlus';
+import IconClose from '../assets/IconClose';
 
 const Faq = ({ activeSection }) => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -45,12 +47,13 @@ const Faq = ({ activeSection }) => {
         <div className="faq-container">
           {faqData.map((item, index) => (
             <div key={index} className="faq-item">
-              <h4
+              <div
                 className={`faq-question ${index === activeIndex ? 'active' : ''}`}
                 onClick={() => toggleAccordion(index)}
               >
-                {item.question}
-              </h4>
+                <h4>{item.question}</h4>
+                <h4 className='faq-icon'>{index === activeIndex ? <IconClose /> : <IconPlus />}</h4>
+              </div>
                 {index === activeIndex && (
                   <p className="faq-answer">
                    {item.answer}
