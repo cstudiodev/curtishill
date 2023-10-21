@@ -11,6 +11,18 @@ const Faq = ({ activeSection }) => {
     {
       question: 'Question 2',
       answer: 'Answer to Question 2',
+    },
+    {
+      question: 'Question 3',
+      answer: 'Answer to Question 3',
+    },
+    {
+      question: 'Question 4',
+      answer: 'Answer to Question 4',
+    },
+    {
+      question: 'Question 5',
+      answer: 'Answer to Question 5',
     }
   ];
 
@@ -27,7 +39,7 @@ const Faq = ({ activeSection }) => {
       <div className='section-content'>
         <div className='section-heading'>
           <h2 className={`${activeSection === 'faq' ? 'heading-active' : ''}`}>
-            Frequently Asked Questions
+            FAQ
           </h2>
         </div>
         <div className="faq-container">

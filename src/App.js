@@ -7,6 +7,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Faq from './components/Faq';
+import Footer from './components/Footer';
 
 function App() {
   const [isSticky, setIsSticky] = useState(false);
@@ -63,6 +64,7 @@ function App() {
       <Element name="faq">
         <Faq activeSection={activeSection} />
       </Element>
+      <Footer/>
     </div>
   );
 }

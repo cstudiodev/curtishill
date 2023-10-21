@@ -1,5 +1,7 @@
 import React from 'react'
-import IconBadge from '../assets/IconBadge'
+import IconEmail from '../assets/IconEmail'
+import IconLinkedin from '../assets/IconLinkedin'
+import IconGithub from '../assets/IconGithub'
 
 const Contact = ({ activeSection }) => {
 
@@ -21,14 +23,19 @@ const Contact = ({ activeSection }) => {
         <div className='section-content'>
           <div className='contact-container'>
             <div className='contact-card'>
-              <IconBadge />
+              <IconEmail />
               <h4>Email</h4>
               <p>curtis@cstudio.ca</p>
             </div>
             <div className='contact-card'>
-              <IconBadge />
-              <h4>Phone</h4>
+              <IconLinkedin />
+              <h4>LinkedIn</h4>
               <p>+1 234-5678-9012</p>
+            </div>
+            <div className='contact-card'>
+              <IconGithub />
+              <h4>GitHub</h4>
+              <p>@cstudiodev</p>
             </div>
           </div>
         </div>
