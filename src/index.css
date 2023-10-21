@@ -507,7 +507,12 @@ footer li {
 }
 
 .faq-answer {
-  padding: 15px 20px 45px 20px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.faq-answer-content {
+  padding: 15px 20px 45px 10px;
   max-width: 95%;
 }
 

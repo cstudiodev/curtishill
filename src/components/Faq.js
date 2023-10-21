@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+
+import React, { useState, useRef } from 'react';
 import IconPlus from '../assets/IconPlus';
-import IconClose from '../assets/IconClose';
+import IconMinus from '../assets/IconMinus';
 
 const Faq = ({ activeSection }) => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const contentRef = useRef([]);
 
   const faqData = [
     {
@@ -52,13 +54,19 @@ const Faq = ({ activeSection }) => {
                 onClick={() => toggleAccordion(index)}
               >
                 <h4>{item.question}</h4>
-                <h4 className='faq-icon'>{index === activeIndex ? <IconClose /> : <IconPlus />}</h4>
+                <h4 className='faq-icon'>
+                  {index === activeIndex ? <IconMinus /> : <IconPlus />}
+                </h4>
               </div>
-                {index === activeIndex && (
-                  <p className="faq-answer">
-                   {item.answer}
-                  </p>
-                )}
+              <div 
+                ref={el => contentRef.current[index] = el}
+                className={`faq-answer ${index === activeIndex ? 'active' : ''}`}
+                style={{
+                  maxHeight: index === activeIndex ? `${contentRef.current[index]?.scrollHeight}px` : '0',
+                }}
+              >
+                <p className="faq-answer-content">{item.answer}</p>
+              </div>
             </div>
           ))}
         </div>
