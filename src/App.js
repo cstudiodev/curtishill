@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
+import Faq from './components/Faq';
 
 function App() {
   const [isSticky, setIsSticky] = useState(false);
@@ -57,7 +58,10 @@ function App() {
         <About activeSection={activeSection} />
       </Element>
       <Element name="contact">
-        <Contact />
+        <Contact activeSection={activeSection} />
+      </Element>
+      <Element name="faq">
+        <Faq activeSection={activeSection} />
       </Element>
     </div>
   );

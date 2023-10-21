@@ -14,7 +14,9 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             duration={500}
             activeClass="link-active"
           >
-          <h3 className='link'>cStudio</h3>
+          <div className='header-logo-container'>
+            <h3 className='link'>cStudio</h3>
+          </div>
         </Link>
         <ul className="header-nav">
           <Link
@@ -48,7 +50,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             <li className='link'>Contact</li>
           </Link>
           <Link
-            to="fAQ"
+            to="faq"
             spy={true}
             smooth={true}
             offset={-100}
