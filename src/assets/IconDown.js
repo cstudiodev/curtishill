@@ -1,6 +1,6 @@
 import React from 'react';
 
-const IconDown = ({ width = '48px', height = '48px', stroke = '#000000', strokeWidth = '3' }) => {
+const IconDown = ({ width = '48px', height = '48px', stroke = '#000000', strokeWidth = '1.5' }) => {
   return (
     <svg 
       width={width} 

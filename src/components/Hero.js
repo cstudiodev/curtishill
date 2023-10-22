@@ -12,11 +12,13 @@ const Hero = () => {
           <h1>Web Design</h1>
           <h1>UI/UX</h1>
         </div>
+        <div className='hero-btn-container'>
           <Link to="services" spy={true} smooth={true} offset={-100} duration={500}>
-            <button className="icon-btn hero-down-btn">
+            <button className="icon-btn hero-btn">
               <IconDown />
             </button>
           </Link>
+        </div>
       </div>
     </section>
   )

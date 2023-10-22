@@ -23,7 +23,7 @@ const Services = ({ activeSection }) => {
           <p className='services-card'>App Integrations</p>
           <p className='services-card'>Bug Fixes</p>
           <p className='services-card'>Speed Optimization</p>
-          <p className='services-card'>Converstion Rate</p>
+          <p className='services-card'>Converstion Optimization</p>
           <p className='services-card'>Training & Support</p>
         </div>
       </div>
