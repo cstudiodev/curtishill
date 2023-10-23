@@ -414,10 +414,51 @@ p, li {
 }
 
 .services-card {
-  background: #f7f7f7;
-  border: 1px solid #000;
-  padding: 30px 10px;
-  border-radius: 5px;
+  height: 100px;
+  width: 100%;
+  perspective: 1000px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.services-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.card-front,
+.card-back {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid var(--body-color);
+  border-radius: var(--border-radius);
+  transition: transform 0.8s ease;
+}
+
+.card-front {
+  background: var(--alt-bg-color-solid);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: var(--highlight-color);
+}
+
+.flipped .card-front {
+  transform: rotateY(180deg);
+  transition: transform 0.8s ease;
+}
+
+.flipped .card-back {
+  transform: rotateY(360deg);
+  transition: transform 0.8s ease;
 }
 
 /* ABOUT SECTION --- */
