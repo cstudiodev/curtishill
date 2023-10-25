@@ -1,10 +1,10 @@
-
 import React, { useState, useRef } from 'react';
 import IconPlus from '../assets/IconPlus';
 import IconMinus from '../assets/IconMinus';
 
 const Faq = ({ activeSection }) => {
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndices, setActiveIndices] = useState([]);
+  const [allOpen, setAllOpen] = useState(false);
   const contentRef = useRef([]);
 
   const faqData = [
@@ -31,38 +31,53 @@ const Faq = ({ activeSection }) => {
   ];
 
   const toggleAccordion = (index) => {
-    if (index === activeIndex) {
-      setActiveIndex(null);
+    const newActiveIndices = [...activeIndices];
+    if (newActiveIndices.includes(index)) {
+      newActiveIndices.splice(newActiveIndices.indexOf(index), 1);
     } else {
-      setActiveIndex(index);
+      newActiveIndices.push(index);
     }
+    setActiveIndices(newActiveIndices);
+  };
+
+  const toggleAll = () => {
+    if (allOpen) {
+      setActiveIndices([]);
+    } else {
+      setActiveIndices(Array.from({ length: faqData.length }, (_, i) => i));
+    }
+    setAllOpen(!allOpen);
   };
 
   return (
     <section id="faq" className='section'>
       <div className='section-content'>
-        <div className='section-heading'>
+        <div className='section-heading faq-heading'>
           <h2 className={`${activeSection === 'faq' ? 'heading-active' : ''}`}>
             FAQ
           </h2>
+          <div className='toggle-container'>
+            <input type="checkbox" id="switch" checked={allOpen} onChange={toggleAll} />
+            <label htmlFor="switch">Toggle</label>
+          </div>
         </div>
         <div className="faq-container">
           {faqData.map((item, index) => (
             <div key={index} className="faq-item">
               <div
-                className={`faq-question ${index === activeIndex ? 'active' : ''}`}
+                className={`faq-question ${activeIndices.includes(index) ? 'active' : ''}`}
                 onClick={() => toggleAccordion(index)}
               >
                 <h4>{item.question}</h4>
                 <h4 className='faq-icon'>
-                  {index === activeIndex ? <IconMinus /> : <IconPlus />}
+                  {activeIndices.includes(index) ? <IconMinus /> : <IconPlus />}
                 </h4>
               </div>
               <div 
                 ref={el => contentRef.current[index] = el}
-                className={`faq-answer ${index === activeIndex ? 'active' : ''}`}
+                className={`faq-answer ${activeIndices.includes(index) ? 'active' : ''}`}
                 style={{
-                  maxHeight: index === activeIndex ? `${contentRef.current[index]?.scrollHeight}px` : '0',
+                  maxHeight: activeIndices.includes(index) ? `${contentRef.current[index]?.scrollHeight}px` : '0',
                 }}
               >
                 <p className="faq-answer-content">{item.answer}</p>
