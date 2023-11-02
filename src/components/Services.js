@@ -43,8 +43,12 @@ const Services = ({ activeSection }) => {
               key={index}
               onClick={() => handleClick(index)}
             >
-              <div className="card-front">{service.front}</div>
-              <div className="card-back">{service.back}</div>
+              <div className="card-front">
+                <p>{service.front}</p>
+              </div>
+              <div className="card-back">
+                <p>{service.back}</p>
+              </div>
             </div>
           ))}
         </div>

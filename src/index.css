@@ -98,13 +98,13 @@ footer li {
     font-size: 30px;
   }
   h3 {
-    font-size: 20px;
+    font-size: 25px;
   }
   h4 {
-    font-size: 15px;
+    font-size: 17px;
   }
   p, li, button {
-    font-size: 15px;
+    font-size: 17px;
   }
   footer p,
   footer li {
@@ -116,13 +116,14 @@ footer li {
   h1 {
     font-size: 30px;
   }
-  h2 {
-    font-size: 25px;
-  }
 }
 
 h1, h2, h3, h4 {
   font-weight: 700;
+}
+
+h4 {
+  font-weight: 500;
 }
 
 button {
@@ -420,7 +421,7 @@ p, li {
 }
 
 .services-card {
-  height: 100px;
+  height: 150px;
   width: 100%;
   perspective: 1000px;
   position: relative;
@@ -428,9 +429,19 @@ p, li {
   transition: transform 0.3s ease;
 }
 
+@media screen and (max-width: 700px) {
+  .services-card {
+    height: 115px;
+  }
+}
+
 .services-card:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
+}
+
+.services-card p {
+  line-height: 125%;
 }
 
 .card-front,
@@ -535,7 +546,7 @@ p, li {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 300;
   display: flex;
   justify-content: center;
@@ -609,7 +620,7 @@ p, li {
 /* CONTACT SECTION --- */
 
 .contact-text-section {
-  width: 70%;
+  width: 65%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -688,9 +699,9 @@ p, li {
 
 @media screen and (max-width: 700px) {
   .toggle-container label {
-    width: 40px;
-    height: 20px;
-    border-radius: 40px;
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
   }
 }
 
@@ -716,9 +727,9 @@ p, li {
 
 @media screen and (max-width: 700px) {
   .toggle-container label:after {
-    width: 15px;
-    height: 15px;
-    border-radius: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
   }
 }
 
@@ -743,7 +754,7 @@ p, li {
 
 @media screen and (max-width: 700px) {
   .toggle-container label:active:after {
-    width: 15px;
+    width: 20px;
   }
 }
 
