@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import IconDown from '../assets/IconDown';
 
 const Hero = () => {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const rootStyle = window.getComputedStyle(document.documentElement);
+    const offsetValue = parseInt(rootStyle.getPropertyValue('--header-height').trim()) * -1;
+    setOffset(offsetValue);
+  }, []);
+
   return (
     <section className='hero-section'>
       <div className='hero-content'>
@@ -13,7 +21,7 @@ const Hero = () => {
           <h1>UI/UX</h1>
         </div>
         <div className='hero-btn-container'>
-          <Link to="services" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link to="services" spy={true} smooth={true} offset={offset} duration={500}>
             <button className="icon-btn hero-btn">
               <IconDown />
             </button>
@@ -24,4 +32,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero;

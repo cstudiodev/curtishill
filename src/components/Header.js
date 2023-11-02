@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import MobileMenu from './MobileMenu';
 import IconMenu from '../assets/IconMenu';
 import IconClose from '../assets/IconClose';
 
 const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
+  const [offset, setOffset] = useState(0);
+
+  useEffect(() => {
+    const rootStyle = window.getComputedStyle(document.documentElement);
+    const headerHeight = parseInt(rootStyle.getPropertyValue('--header-height').trim()) * -1;
+    setOffset(headerHeight);
+  }, []);
+
   return (
     <header className={`header ${isSticky ? 'sticky' : ''}`}>
       <div className="header-content">
@@ -12,7 +20,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             to="hero"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={offset}
             duration={500}
             activeClass="link-active"
           >
@@ -25,7 +33,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             to="services"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={offset}
             duration={500}
             activeClass="link-active"
           >
@@ -35,7 +43,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             to="about"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={offset}
             duration={500}
             activeClass="link-active"
           >
@@ -45,7 +53,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             to="contact"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={offset}
             duration={500}
             activeClass="link-active"
           >
@@ -55,7 +63,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             to="faq"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={offset}
             duration={500}
             activeClass="link-active"
           >
@@ -70,7 +78,7 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
           {isMobileMenuVisible ? <IconClose /> : <IconMenu />}
         </button>
       </div>
-      {isMobileMenuVisible && <MobileMenu />}
+      {isMobileMenuVisible && <MobileMenu toggleMobileMenu={toggleMobileMenu} />}
     </header>
   );
 };

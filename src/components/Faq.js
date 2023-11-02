@@ -27,6 +27,18 @@ const Faq = ({ activeSection }) => {
     {
       question: 'Question 5',
       answer: 'Answer to Question 5',
+    },
+    {
+      question: 'Question 6',
+      answer: 'Answer to Question 6',
+    },
+    {
+      question: 'Question 7',
+      answer: 'Answer to Question 7',
+    },
+    {
+      question: 'Question 8',
+      answer: 'Answer to Question 8',
     }
   ];
 

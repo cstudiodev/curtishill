@@ -14,8 +14,10 @@ function App() {
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
 
+  const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height'), 10);
+
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > headerHeight) {
       setIsSticky(true);
     } else {
       setIsSticky(false);
