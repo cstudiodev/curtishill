@@ -70,7 +70,9 @@ const Header = ({ isSticky, toggleMobileMenu, isMobileMenuVisible }) => {
             <li className='link'>FAQ</li>
           </Link>
         </ul>
-        <button className="btn header-cta-btn btn-lg">Hire</button>
+        <a href="https://www.upwork.com/freelancers/~011cb15a0a6b6fbfb2" target="_blank" rel="noopener noreferrer">
+          <button className="btn header-cta-btn btn-lg">Hire</button>
+        </a>
         <button
           className="icon-btn mobile-menu-btn"
           onClick={toggleMobileMenu}

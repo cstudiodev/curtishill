@@ -53,7 +53,9 @@ const MobileMenu = ({ toggleMobileMenu }) => {
           <li className='link'>FAQ</li>
         </Link>
       </ul>
-      <button className='btn btn-lg'>HIRE</button>
+      <a href="https://www.upwork.com/freelancers/~011cb15a0a6b6fbfb2" target="_blank" rel="noopener noreferrer">
+          <button className="btn btn-lg">Hire</button>
+        </a>
     </div>
   )
 }

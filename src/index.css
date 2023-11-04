@@ -45,6 +45,10 @@ button, input[type="button"], input[type="submit"] {
   outline: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* FONTS --- */
 
 h1 {
@@ -74,7 +78,8 @@ p, li, button {
 }
 
 footer p,
-footer li {
+footer li,
+.about-technology p {
   font-size: 15px;
 }
 
@@ -107,7 +112,8 @@ footer li {
     font-size: 17px;
   }
   footer p,
-  footer li {
+  footer li,
+  .about-technology p {
   font-size: 12px;
 }
 }
@@ -514,18 +520,18 @@ p, li {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
 }
 
 .about-technologies {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5px;
 }
 
 .about-technology {
-  padding: 5px 12px;
+  padding: 4px 10px;
   background: var(--bg-color);
   border: 1px solid var(--body-color);
   border-radius: var(--border-radius);
@@ -537,7 +543,7 @@ p, li {
   cursor: pointer;
   display: flex;
   justify-content: center;
-  margin-left: 5px;
+  margin-left: 4px;
 }
 
 .tooltip-popup {
@@ -667,6 +673,12 @@ p, li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .toggle-container input[type=checkbox] {

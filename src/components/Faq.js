@@ -116,9 +116,14 @@ const Faq = ({ activeSection }) => {
           <h2 className={`${activeSection === 'faq' ? 'heading-active' : ''}`}>
             FAQ
           </h2>
-          <div className='toggle-container'>
-            <input type="checkbox" id="switch" checked={allOpen} onChange={toggleAll} />
-            <label htmlFor="switch">Toggle</label>
+          <div className='toggle-group'>
+            <button className="toggle-text" onClick={toggleAll}>
+              {allOpen ? 'Collapse All' : 'Expand All'}
+            </button>
+            <div className='toggle-container'>
+              <input type="checkbox" id="switch" checked={allOpen} onChange={toggleAll} />
+              <label htmlFor="switch">Toggle</label>
+            </div>
           </div>
         </div>
         <div className="faq-container">
