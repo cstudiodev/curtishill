@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import aboutPlaceholder from '../assets/about-placeholder-rec.jpg';
 import IconInfo from '../assets/IconInfo'
 import IconClose from '../assets/IconClose'
 import IconBadge from '../assets/IconBadge'
@@ -22,7 +23,7 @@ const About = ({ activeSection }) => {
     { name: 'Adobe Photoshop', tooltip: 'Adobe Photoshop is a leading graphic editing software, primarily used for raster graphics, image manipulation, and digital art.' },
     { name: 'Adobe XD', tooltip: 'Adobe XD is a vector-based design tool used for creating user interfaces and prototypes for web and mobile apps.' },
     { name: 'Figma', tooltip: 'Figma is a cloud-based design tool that allows real-time collaboration. It is used for UI and UX design, prototyping, and more.' },
-    { name: 'GPT-4', tooltip: 'The GPT-4 (Generative Pre-trained Transformer 4) model by OpenAI is one of the latest advancements in artificial intelligence, offering sophisticated natural language understanding and generation.' }
+    { name: 'ChatGPT', tooltip: 'The GPT-4 (Generative Pre-trained Transformer 4) model by OpenAI is one of the latest advancements in artificial intelligence, offering sophisticated natural language understanding and generation.' }
   ];  
 
   const handleTooltip = (index) => {
@@ -63,30 +64,34 @@ const About = ({ activeSection }) => {
               ))}
             </div>
           </div>
-          <div className='about-video-section'>
-            <div className='about-video'>PLAY</div>
+          <div className='about-media-section'>
+            <img className='about-media' src={aboutPlaceholder} alt='Placeholder' />
           </div>
         </div>
         <div className='about-trust-badge-container'>
           <div className='about-trust-badge'>
             <IconBadge />
-            <h4>100% Success Rate</h4>
-            <p>On Upwork</p>
+            <div className='trust-badge-content'>
+              <p>100% Success Rate on Upwork</p>
+            </div>
           </div>
           <div className='about-trust-badge'>
             <IconResume />
-            <h4>10+ Years Experience</h4>
-            <p>In Ecommerce</p>
+            <div className='trust-badge-content'>
+              <p>10+ Years Experience in Ecommerce</p>
+            </div>
           </div>
           <div className='about-trust-badge'>
             <IconCreditCard />
-            <h4>100% Money-Back</h4>
-            <p>Guarantee</p>
+            <div className='trust-badge-content'>
+              <p>100% Money-Back Guarantee</p>
+            </div>
           </div>
           <div className='about-trust-badge'>
             <IconSupport />
-            <h4>Ongoing Support</h4>
-            <p>& Maintainence</p>
+            <div className='trust-badge-content'>
+              <p>Ongoing Support & Maintenance</p>
+            </div>
           </div>
         </div>
       </div>
