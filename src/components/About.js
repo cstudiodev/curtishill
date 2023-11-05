@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import aboutPlaceholder from '../assets/about-placeholder-rec.jpg';
+import aboutPlaceholder from '../assets/me-w-laptop-1250.jpg';
 import IconInfo from '../assets/IconInfo'
 import IconClose from '../assets/IconClose'
 import IconBadge from '../assets/IconBadge'
@@ -39,7 +39,7 @@ const About = ({ activeSection }) => {
         </div>
         <div className='about-video-with-text-container'>
           <div className='about-text-section'>
-            <p className='about-text'>Hi, I'm Curtis, your dedicated Shopify expert. I'm here to elevate your online store with custom solutions that blend beauty with functionality. We'll not only captivate your customers with stunning design but also empower them with a user-friendly experience that converts. From coding to conversion-driven strategies, let's team up to amplify your digital presence and ignite your sales!</p>
+            <p className='about-text'>Hi, I'm Curtis, your dedicated Shopify expert. Here to elevate your online store! Let's captivate your customers with stunning design and empower them with a user-friendly experience that converts. From coding to conversion-driven strategies, let's team up to amplify your digital presence!</p>
             <p className='about-text'>Technologies I use:</p>
             <div className='about-technology-container'>
               {technologies.map((tech, index) => (
