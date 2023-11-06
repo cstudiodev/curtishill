@@ -15,7 +15,7 @@ const Contact = ({ activeSection }) => {
             </h2>
           </div>
           <div className='contact-text-section'>
-            <p className='contact-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p className='contact-text'>If you're interested in discussing a project or simply want to connect, you can email me directly, connect with me on LinkedIn, or explore my past work and contributions on GitHub. I look forward to the opportunity to collaborate!</p>
           </div>
         </div>
       </section>
@@ -24,18 +24,15 @@ const Contact = ({ activeSection }) => {
           <div className='contact-container'>
             <div className='contact-card'>
               <IconEmail />
-              <h4>Email</h4>
-              <p>curtis@cstudio.ca</p>
+              <a href="mailto:curtis@cstudio.ca">curtis@cstudio.ca</a>
             </div>
             <div className='contact-card'>
               <IconLinkedin />
-              <h4>LinkedIn</h4>
-              <p>+1 234-5678-9012</p>
+              <a href="https://www.linkedin.com/in/cstudiodev" target="_blank" rel="noopener noreferrer">Visit LinkedIn</a>
             </div>
             <div className='contact-card'>
               <IconGithub />
-              <h4>GitHub</h4>
-              <p>@cstudiodev</p>
+              <a href="https://github.com/cstudiodev" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
             </div>
           </div>
         </div>
