@@ -333,7 +333,7 @@ p, li {
   height: 100%;
   max-width: var(--max-width);
   margin: auto;
-  padding: var(--section-padding) var(--gutter-padding);
+  padding: calc(var(--section-padding) *2) var(--gutter-padding);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
