@@ -21,20 +21,20 @@ const Contact = ({ activeSection }) => {
       </section>
       <section className='section alt-bg'>
         <div className='section-content'>
-          <div className='contact-container'>
-            <div className='contact-card'>
-              <IconEmail />
-              <a href="mailto:curtis@cstudio.ca">curtis@cstudio.ca</a>
+            <div className='contact-container'>
+                <a href="mailto:curtis@cstudio.ca" className='contact-card'>
+                    <IconEmail />
+                    <span>curtis@cstudio.ca</span>
+                </a>
+                <a href="https://www.linkedin.com/in/cstudiodev" target="_blank" rel="noopener noreferrer" className='contact-card'>
+                    <IconLinkedin />
+                    <span>Visit LinkedIn ↗</span>
+                </a>
+                <a href="https://github.com/cstudiodev" target="_blank" rel="noopener noreferrer" className='contact-card'>
+                    <IconGithub />
+                    <span>Visit GitHub ↗</span>
+                </a>
             </div>
-            <div className='contact-card'>
-              <IconLinkedin />
-              <a href="https://www.linkedin.com/in/cstudiodev" target="_blank" rel="noopener noreferrer">Visit LinkedIn</a>
-            </div>
-            <div className='contact-card'>
-              <IconGithub />
-              <a href="https://github.com/cstudiodev" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
-            </div>
-          </div>
         </div>
       </section>
     </>
