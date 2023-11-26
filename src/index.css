@@ -683,6 +683,8 @@ p, li {
   background: var(--alt-bg-color);
   border: 1px solid var(--body-color);
   border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .contact-card:hover {
