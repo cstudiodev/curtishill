@@ -685,6 +685,11 @@ p, li {
   border-radius: var(--border-radius);
 }
 
+.contact-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
 /* FAQ SECTION --- */
 
 .faq-heading {
