@@ -11,7 +11,7 @@ const Services = ({ activeSection }) => {
   };
 
   const servicesList = [
-    { front: 'Consulting & Management', back: 'Develop a comprehensive strategy for your eCommerce business with expert advice and management the project through completion.' },
+    { front: 'Planning & Consulting', back: 'Develop a comprehensive strategy for your eCommerce business with expert advice.' },
     { front: 'Web Design', back: 'Get bespoke web designs that are not only visually stunning but also optimized for conversions and user engagement.' },
     { front: 'UI/UX Design', back: 'Create a user-centric interface that’s intuitive, easy-to-navigate, and designed to facilitate customer journeys.' },
     { front: 'Shopify 1.0', back: 'Maximize the capabilities of the original Shopify platform with full-stack development services.' },
